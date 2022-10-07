@@ -1,0 +1,13 @@
+#VPS
+DST-PORT,22
+
+#去广告误杀
+DOMAIN-SUFFIX,push2.eastmoney.com
+DOMAIN-SUFFIX,vaserviece.10jqka.com.cn
+
+# > Azure 
+DOMAIN,cfcsql530f03ca79dd7440.database.windows.net
+
+# > Plex
+DOMAIN-SUFFIX,downloads.plex.tv
+DOMAIN-SUFFIX,clients.plex.tv
