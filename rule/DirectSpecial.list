@@ -11,3 +11,6 @@ DOMAIN,cfcsql530f03ca79dd7440.database.windows.net
 # > Plex
 DOMAIN-SUFFIX,downloads.plex.tv
 DOMAIN-SUFFIX,clients.plex.tv
+
+SRC-PORT,32400
+SRC-PORT,60700
