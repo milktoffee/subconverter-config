@@ -12,5 +12,8 @@ DOMAIN,cfcsql530f03ca79dd7440.database.windows.net
 DOMAIN-SUFFIX,downloads.plex.tv
 DOMAIN-SUFFIX,clients.plex.tv
 
+# > YToo API
+DOMAIN,api.oxycontin.cc
+
 SRC-PORT,32400
 SRC-PORT,60700
