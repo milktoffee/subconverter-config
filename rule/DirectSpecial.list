@@ -9,8 +9,9 @@ DOMAIN-SUFFIX,vaserviece.10jqka.com.cn
 DOMAIN,cfcsqlcc15ec9324f5b5d8.database.windows.net
 
 # > Plex
-DOMAIN-SUFFIX,downloads.plex.tv
-DOMAIN-SUFFIX,clients.plex.tv
+DOMAIN,plex.tv
+#DOMAIN-SUFFIX,downloads.plex.tv
+#DOMAIN-SUFFIX,clients.plex.tv
 
 # > YToo API
 DOMAIN,api.oxycontin.cc
