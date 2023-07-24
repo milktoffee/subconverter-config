@@ -1,3 +1,4 @@
 DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN,translate.googleapis.com
 DOMAIN,translate.google.com
+IP-CIDR,208.54.0.0/16
