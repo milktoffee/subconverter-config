@@ -95,6 +95,7 @@ dns:
     fake-ip-range: 198.18.0.1/16  #Fake-ip解析ip池
     fake-ip-filter:  #Fake-ip过滤，对这些域名的请求将始终使用其真实 IP 地址进行响应
       - '*.lan'
+      - '*.local'
       - WORKGROUP
       - '*.msftncsi.com'
       - '*.msftconnecttest.com'
