@@ -2,4 +2,5 @@ DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN,login.microsoftonline.com
 DOMAIN,translate.googleapis.com
 DOMAIN,translate.google.com
+DOMAIN-SUFFIX,epochtimes.com
 IP-CIDR,208.54.0.0/16,no-resolve
