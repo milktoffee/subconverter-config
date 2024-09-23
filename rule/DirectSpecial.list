@@ -9,7 +9,6 @@ DOMAIN-SUFFIX,vaserviece.10jqka.com.cn
 DOMAIN,cfcsqlcc15ec9324f5b5d8.database.windows.net
 
 # > Plex
-DOMAIN-SUFFIX,plex.tv
 DOMAIN,v4.plex.tv
 #DOMAIN-SUFFIX,downloads.plex.tv
 #DOMAIN-SUFFIX,clients.plex.tv
