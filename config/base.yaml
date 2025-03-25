@@ -124,12 +124,12 @@ dns:
       - '*.n.n.srv.nintendo.net'      
       - '+.stun.playstation.net'
     use-hosts: true  # 查找 hosts 并返回 IP 记录
-    nameserver-policy:  #指定域名使用自定义DNS解析      
-      '+.alibaba*': '223.5.5.5'      
-      'geosite:cn': https://doh.pub/dns-query  #国内DNS服务器
-      'geosite:geolocation-!cn': tls://8.8.4.4 #, https://1.0.0.1/dns-query]  
-      'www.baidu.com,+.google.cn': https://doh.pub/dns-query  
-      'geosite:private,apple': https://dns.alidns.com/dns-query  
+    #nameserver-policy:  #指定域名使用自定义DNS解析      
+    #  '+.alibaba*': '223.5.5.5'      
+    #  'geosite:cn': https://doh.pub/dns-query  #国内DNS服务器
+    #  'geosite:geolocation-!cn': tls://8.8.4.4 #, https://1.0.0.1/dns-query]  
+    #  'www.baidu.com,+.google.cn': https://doh.pub/dns-query  
+    #  'geosite:private,apple': https://dns.alidns.com/dns-query  
       #'rule-set:google,cloudflare': 8.8.8.8
     nameserver: #默认DNS服务器(国内)，支持udp/tcp/dot/doh
       - https://doh.pub/dns-query             #腾讯doh   
