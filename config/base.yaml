@@ -86,6 +86,11 @@ clash-for-android:
 #  - "localhost"
 #  - <local>
 
+profile:
+    tracing: true
+    store-selected: true
+    store-fake-ip: true
+
 dns:
     enable: true    
     default-nameserver:  #解析非IP的dns用的dns服务器,只支持纯IP
@@ -96,15 +101,23 @@ dns:
     fake-ip-filter:  #Fake-ip过滤，对这些域名的请求将始终使用其真实 IP 地址进行响应
       - '*.lan'
       - '*.local'
+      - '*.localhost'
+      - '*.localdomain'
+      - '*.example'
+      - '*.invalid'
+      - '*.test'
       - WORKGROUP
       - '*.msftncsi.com'
       - '*.msftconnecttest.com'
+      - msftconnecttest.com
+      - msftncsi.com
       - '+.stun.*.*'
       - '+.stun.*.*.*'
       - '+.stun.*.*.*.*'
       - '+.stun.*.*.*.*.*'
       - 'xbox.*.microsoft.com'
       - 'xbox.*.*.microsoft.com'
+      - xnotify.xboxlive.com
       - '*.xboxlive.com'
       - '*.*.xboxlive.com'
       - '+.srv.nintendo.net'
@@ -119,9 +132,13 @@ dns:
       'geosite:private,apple': https://dns.alidns.com/dns-query  
       #'rule-set:google,cloudflare': 8.8.8.8
     nameserver: #默认DNS服务器(国内)，支持udp/tcp/dot/doh
-      - https://doh.pub/dns-query             #腾讯doh            
+      - https://doh.pub/dns-query             #腾讯doh   
+      - https://dns.alidns.com/dns-query
       - tls://dns.alidns.com                  #阿里dot      
     fallback: #回落DNS服务器(国外)，支持udp/tcp/dot/doh, Fake-ip可不设
+      - https://dns.quad9.net/dns-query
+      - https://dns.cloudflare.com/dns-query
+      - https://doh.mullvad.net/dns-query
       - https://1.1.1.1/dns-query                #Cloudflare DNS
       - https://101.101.101.101/dns-query        #台北TWNIC
       - https://208.67.220.220/dns-query         #Cisco OpenDNS
