@@ -136,9 +136,8 @@ dns:
       - https://dns.alidns.com/dns-query
       - tls://dns.alidns.com                  #阿里dot      
     fallback: #回落DNS服务器(国外)，支持udp/tcp/dot/doh, Fake-ip可不设
-      - https://dns.quad9.net/dns-query
       - https://dns.cloudflare.com/dns-query
-      - https://doh.mullvad.net/dns-query
+      - https://max.rethinkdns.com/dns-query
       - https://1.1.1.1/dns-query                #Cloudflare DNS
       - https://101.101.101.101/dns-query        #台北TWNIC
       - https://208.67.220.220/dns-query         #Cisco OpenDNS
