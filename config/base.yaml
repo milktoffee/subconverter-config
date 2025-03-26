@@ -138,6 +138,7 @@ dns:
     fallback: #回落DNS服务器(国外)，支持udp/tcp/dot/doh, Fake-ip可不设
       - https://dns.cloudflare.com/dns-query
       - https://max.rethinkdns.com/dns-query
+      - https://dns.google/dns-query
       - https://1.1.1.1/dns-query                #Cloudflare DNS
       - https://101.101.101.101/dns-query        #台北TWNIC
       - https://208.67.220.220/dns-query         #Cisco OpenDNS
@@ -152,9 +153,13 @@ dns:
 
     # 当 `fallback-filter.geoip` 为 true 且 IP 地址的 GEOIP 为 `CN` 时,
     # 将使用 `nameservers` 服务器解析的 IP 地址.
-    #
     # 如果 `fallback-filter.geoip` 为 false, 且不匹配 `fallback-filter.ipcidr`,
     # 则始终使用 `nameservers` 服务器的结果
+
+    # “fallback” 字段指定的 DNS 服务器将被用于解析非国外域名，
+    # 而 “fallback-filter” 字段则实现我们想要的分流规则，
+    # 当请求解析的域名在 GeoIP 数据库内的国家代码不是 CN 时，或是域名在前文设置的 DNS 服务器内的解析结果位于 240.0.0.0/4 这一 IP 段内时（被屏蔽的域名解析常常会被污染到这一段），
+    # 使用 “fallback” 字段指定的 DNS 服务器解析域名。
 
 #dns:
 #  enable: true
