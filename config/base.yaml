@@ -135,25 +135,25 @@ dns:
       - https://doh.pub/dns-query             #腾讯doh   
       - https://dns.alidns.com/dns-query
       - tls://dns.alidns.com                  #阿里dot      
-    fallback: #回落DNS服务器(国外)，支持udp/tcp/dot/doh, Fake-ip可不设
-      - https://dns.cloudflare.com/dns-query
-      - https://cloudflare-dns.com/dns-query      
-      - https://dns.hinet.net/dns-query
-      - https://doh.opendns.com/dns-query
+    #fallback: #回落DNS服务器(国外)，支持udp/tcp/dot/doh, Fake-ip可不设
+    #  - https://dns.cloudflare.com/dns-query
+    #  - https://cloudflare-dns.com/dns-query      
+    #  - https://dns.hinet.net/dns-query
+    #  - https://doh.opendns.com/dns-query
       #- https://max.rethinkdns.com/dns-query
       #- https://dns.google/dns-query
       # 目前 非域名 的DoH/DoT 被防火墙阻断了
-      - https://1.1.1.1/dns-query                #Cloudflare DNS
+    #  - https://1.1.1.1/dns-query                #Cloudflare DNS
       #- https://101.101.101.101/dns-query        #台北TWNIC
       #- https://208.67.220.220/dns-query         #Cisco OpenDNS
       #- https://149.112.112.112:5053/dns-query   #Norton DNS doh
-    fallback-filter:  #回落DNS服务器过滤, Fake-ip可不设,只作用于fake-ip filter列表
-      geoip: true      #为真时，不匹配为geoip规则的使用fallback返回结果
-      geoip-code: CN   #geoip-code 配置的国家的结果会直接采用，否则将采用 fallback结果
-      ipcidr:          #列表中的ip使用fallback返回解析结果
-        - 240.0.0.0/4        
-      domain:          #列表中的域名使用fallback返回解析结果
-        - '+.google.com'        
+    #fallback-filter:  #回落DNS服务器过滤, Fake-ip可不设,只作用于fake-ip filter列表
+    #  geoip: true      #为真时，不匹配为geoip规则的使用fallback返回结果
+    #  geoip-code: CN   #geoip-code 配置的国家的结果会直接采用，否则将采用 fallback结果
+    #  ipcidr:          #列表中的ip使用fallback返回解析结果
+    #    - 240.0.0.0/4        
+    #  domain:          #列表中的域名使用fallback返回解析结果
+    #    - '+.google.com'        
 
     # 当 `fallback-filter.geoip` 为 true 且 IP 地址的 GEOIP 为 `CN` 时,
     # 将使用 `nameservers` 服务器解析的 IP 地址.
