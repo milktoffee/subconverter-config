@@ -3,6 +3,18 @@
 # DNS 端点已于 2026-08-22 在当前 WRT / OpenClash 链路验证
 # IPv6 路由由 Myself.ini 中的 Lan、ChinaMax 与 GEOIP,CN 规则生成
 
+# 仅用于 provider 下载，不加入业务分流组；持续探测以便后续下载使用回退结果。
+proxy-groups:
+  - name: 规则下载
+    type: fallback
+    proxies:
+      - 🚀 全局设置
+      - DIRECT
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/.gitignore
+    interval: 300
+    lazy: false
+    expected-status: 200
+
 port: 7890
 socks-port: 7891
 redir-port: 7892

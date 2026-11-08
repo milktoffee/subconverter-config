@@ -1,0 +1,12 @@
+# 两份 INI 共用的规则集定义。名称必须与 []RULE-SET 中的名称一致。
+# 仅被当前 INI 引用的项目会进入生成配置；未引用项不会被下载。
+# proxy 影响首次下载及后续更新，不是规则匹配后的业务出口。
+rule-providers:
+  china-max:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml
+    path: ./rule-providers/china-max.yaml
+    interval: 86400
+    proxy: 规则下载
